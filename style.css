@@ -13,3 +13,18 @@
 .multi-option:hover{background:#294640}
 .multi-option input{width:16px;height:16px;min-width:16px;margin:0;accent-color:var(--mint)}
 .all-option{border-bottom:1px solid var(--line);border-radius:0;margin-bottom:5px}
+
+/* Paste-based CSV import (mobile-friendly) */
+.paste-import{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:0 0 15px}
+.paste-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.paste-heading h2{font-size:15px;margin:0 0 6px;color:var(--mint2)}
+.paste-heading p,.paste-note{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+#pastePanel[hidden]{display:none}
+#pastePanel{border-top:1px solid var(--line);margin-top:15px;padding-top:14px;display:grid;gap:8px}
+#pastePanel label{color:var(--muted);font-size:12px}
+#pasteMode{max-width:260px}
+#csvPaste{width:100%;min-height:155px;resize:vertical;background:#101f23;border:1px solid var(--line);color:var(--text);border-radius:9px;padding:12px;font:12px/1.5 ui-monospace,Consolas,monospace;white-space:pre;overflow:auto}
+#csvPaste:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.paste-actions{display:flex;gap:8px;flex-wrap:wrap;margin:5px 0}
+.paste-actions button:disabled{opacity:.5;cursor:wait}
+@media(max-width:760px){.paste-import{padding:14px}.paste-heading{align-items:stretch;flex-direction:column}.paste-heading button{width:100%}.paste-actions button{flex:1}}
